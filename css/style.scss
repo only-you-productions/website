@@ -84,7 +84,7 @@ body > footer {
 
 
 $menu-height: 4*$lh;
-$menu-mobile-height: 7*$lh;
+$menu-mobile-height: 3*$lh;
 
 /**
  * Specific main layout elements
@@ -136,11 +136,15 @@ body > header {
     height: $menu-mobile-height;
     nav {
       text-align: center;
-      margin-top: 3*$lh;
-      a.logo {
-        top: -2*$lh;
-        left: 50%;
-        margin-left: -55px;
+      a {
+        line-height: $menu-mobile-height;
+
+        &.logo {
+          display: none;
+          // top: -2*$lh;
+          // left: 50%;
+          // margin-left: -55px;
+        }
       }
     }
   }
