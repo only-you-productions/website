@@ -166,6 +166,9 @@ body > header {
         text-align: center;
         a {
           line-height: $menu-mobile-height;
+          &.active:after {
+            bottom: 1.25rem;
+          }
           &.logo {
             display: none;
             // top: -2*$lh;
