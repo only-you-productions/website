@@ -162,6 +162,7 @@ section.why-only-you {
       font-size: 1.875rem;
       font-style: italic;
       color: #ff6666;
+      position: relative;
     }
     p {
       font-size: 1.2rem;
@@ -177,6 +178,18 @@ section.why-only-you {
       display: inline-block;
       padding-left: 1.65rem;
       max-width: 372px;
+      h2 {
+        position: relative;
+        &:after {
+          content: '';
+          width: 21px;
+          height: 25px;
+          position: absolute;
+          top: -0.25em;
+          left: -26px;
+          background: url("../images/check.png") no-repeat top left;
+        }
+      }
     }
     @include clearfix;
   }
