@@ -83,11 +83,14 @@ body > footer {
 }
 
 
+$menu-height: 4*$lh;
+$menu-mobile-height: 7*$lh;
+
 /**
  * Specific main layout elements
  */
 body > header {
-  $height: 4*$lh;
+  $menu-height: 4*$lh;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,11 +102,14 @@ body > header {
   padding-bottom: 0;
 
   background: $header-color;
-  height: $height;
+  height: $menu-height;
+
+
   nav {
     text-transform: uppercase;
     text-align: right;
     position: relative;
+
     a {
       display: inline-block;
       font-family: Ostrich, sans-serif;
@@ -113,7 +119,7 @@ body > header {
       letter-spacing: 0.05em;
       text-decoration: none;
       color: white;
-      line-height: $height;
+      line-height: $menu-height;
       padding: 0 0.5em;
       &.logo {
         height: 56px;
@@ -125,6 +131,20 @@ body > header {
       }
     }
   }
+
+  @media (max-width: 480px) {
+    height: $menu-mobile-height;
+    nav {
+      text-align: center;
+      margin-top: 3*$lh;
+      a.logo {
+        top: -2*$lh;
+        left: 50%;
+        margin-left: -55px;
+      }
+    }
+  }
+
 }
 
 a.anchor {
@@ -304,4 +324,6 @@ body > footer {
     }
   }
 }
+
+
 
