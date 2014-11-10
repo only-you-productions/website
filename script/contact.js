@@ -48,9 +48,11 @@ jQuery(function($) {
   });
 
   function disableForm() {
+    formElement.addClass('sending');
     formElement.find(':input').prop("disabled", true);
   }
   function enableForm() {
+    formElement.removeClass('sending');
     formElement.find(':input').prop("disabled", false);
   }
 

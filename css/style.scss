@@ -365,6 +365,9 @@ body > footer {
 
 .contact-form {
   width: 90%;
+  &.sending {
+    opacity: 0.5;
+  }
   input, textarea, button {
     display: block;
     padding: 0 $lh/2;
