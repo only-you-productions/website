@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: $header-color;
   padding: 0;
   margin: 0;
   line-height: $lh;
@@ -199,6 +199,7 @@ section.showreel {
   }
 }
 section.work {
+  background: white;
   &:after {
     border-top-color: #fff;
   }
@@ -208,6 +209,9 @@ section.why-only-you {
   &:after {
     border-top-color: #F5F5F6;
   }
+}
+section.team {
+  background: white;
 }
 
 
