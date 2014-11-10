@@ -1,0 +1,11 @@
+
+$header-color: #135B79;
+$site-width: 744px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

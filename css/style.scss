@@ -1,0 +1,214 @@
+---
+# This is the necessary Front Matter so that jekyll compiles sass
+---
+
+// This Stylesheet is written in SASS (sass-lang.com) and compiled to
+// CSS by Jekyll on the fly.
+
+
+@import "_settings.scss";
+@import "_css-reset.scss";
+@import "_fonts.scss";
+
+
+
+$lh: 1.5rem;
+
+
+/**
+ * Generic definitions
+ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+html {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  line-height: $lh;
+  color: #666;
+  font-weight: 200;
+}
+
+h1, h2 {
+  font-family: Ostrich;
+  font-weight: bold;
+  color: #7399a1;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.05em;
+  margin: $lh 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2*$lh;
+}
+h2 {
+  font-size: 1.38rem;
+}
+
+p {
+  margin: $lh 0;
+}
+
+
+body > section,
+body > header,
+body > footer {
+
+  padding: $lh 1rem;
+
+  // Making sure that the content elements are the correct width.
+  // We always need an additional "wrapper" element, because the content
+  // pages have full width backgrounds (white vs silver)
+  > * {
+    max-width: $site-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body > header {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+/**
+ * Specific main layout elements
+ */
+body > header {
+  $height: 6.4rem;
+
+  background: $header-color;
+  height: $height;
+  nav {
+    text-transform: uppercase;
+    a {
+      display: inline-block;
+      font-family: Ostrich, sans-serif;
+      font-weight: bold;
+      font-size: 1.212rem;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      color: white;
+      line-height: $height;
+      padding: 0 0.5em;
+    }
+  }
+}
+
+
+
+/**
+ * Specific content elements
+ */
+#showreel {
+  background: #E1E1E2;
+  padding: 3*$lh 0;
+  text-align: center;
+}
+
+.hero-unit {
+  text-align: center;
+  > p {
+    max-width: 680px;
+  }
+}
+
+#why-only-you {
+  background: #F5F5F6;
+  header {
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 1.875rem;
+      font-style: italic;
+      color: #ff6666;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 550px;
+    }
+  }
+
+  ul {
+    text-align: center;
+    li {
+      text-align: left;
+      vertical-align: top;
+      display: inline-block;
+      padding-left: 1.65rem;
+      max-width: 372px;
+    }
+    @include clearfix;
+  }
+
+  padding-bottom: $lh;
+}
+
+
+#team {
+  padding: $lh 0;
+  ul {
+    text-align: center;
+    li {
+      display: inline-block;
+      width: $site-width / 4;
+      text-align: center;
+      vertical-align: top;
+      margin: $lh 0;
+      .photo {
+        margin: 0 auto;
+        border: 10px solid #E5ECED;
+        border-radius: 100%;
+        width: 164px;
+        height: 164px;
+        overflow: hidden;
+        img {
+          display: block;
+        }
+      }
+      h2 {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 0;
+      }
+      .role {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+body > footer {
+  background: #EEEEEF;
+  font-size: 0.8rem;
+  padding-bottom: 6*$lh;
+  text-align: center;
+
+  section {
+    display: inline-block;
+    width: $site-width/3;
+    vertical-align: top;
+    margin: $lh 0;
+    text-align: left;
+    h1 {
+      font-size: 1.6rem;
+      line-height: $lh;
+
+    }
+  }
+}
+
