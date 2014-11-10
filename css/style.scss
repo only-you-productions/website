@@ -61,11 +61,15 @@ p {
   margin: $lh 0;
 }
 
+a {
+  color: blue;
+}
 
 body > section,
 body > header,
 body > footer {
 
+  position: relative;
   padding: $lh 1rem;
 
   // Making sure that the content elements are the correct width.
@@ -78,22 +82,28 @@ body > footer {
   }
 }
 
-body > header {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 
 /**
  * Specific main layout elements
  */
 body > header {
-  $height: 6.4rem;
+  $height: 4*$lh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  padding-top: 0;
+  padding-bottom: 0;
 
   background: $header-color;
   height: $height;
   nav {
     text-transform: uppercase;
+    text-align: right;
+    position: relative;
     a {
       display: inline-block;
       font-family: Ostrich, sans-serif;
@@ -105,19 +115,36 @@ body > header {
       color: white;
       line-height: $height;
       padding: 0 0.5em;
+      &.logo {
+        height: 56px;
+        width: 134px;
+        position: absolute;
+        top: 1.1em;
+        left: 0;
+        padding: 0;
+      }
     }
   }
 }
 
+a.anchor {
+  // Making sure that the actual anchor element is more at the top so the
+  // content isn't hidden by the menu
+  position: absolute;
+  top: -4*$lh;
+}
 
 
 /**
  * Specific content elements
  */
-#showreel {
+section.showreel {
   background: #E1E1E2;
-  padding: 3*$lh 0;
+  padding: 7*$lh 0 3*$lh 0;
   text-align: center;
+  iframe {
+    max-width: 100%;
+  }
 }
 
 .hero-unit {
@@ -127,7 +154,7 @@ body > header {
   }
 }
 
-#why-only-you {
+section.why-only-you {
   background: #F5F5F6;
   header {
     h1 {
@@ -158,7 +185,7 @@ body > header {
 }
 
 
-#team {
+section.team {
   padding: $lh 0;
   ul {
     text-align: center;
