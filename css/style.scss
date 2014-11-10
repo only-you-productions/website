@@ -127,6 +127,18 @@ body > header {
         color: white;
         line-height: $menu-height;
         padding: 0 0.5em;
+        position: relative;
+
+        &.active:after {
+          content: '';
+          position: absolute;
+          bottom: 2rem;
+          height: 4px;
+          background: white;
+          left: 0.3em;
+          right: 0.3em;
+        }
+
         &.logo {
           height: 56px;
           width: 134px;
@@ -154,7 +166,6 @@ body > header {
         text-align: center;
         a {
           line-height: $menu-mobile-height;
-
           &.logo {
             display: none;
             // top: -2*$lh;

@@ -66,6 +66,52 @@ jQuery(function($) {
     alert('Sorry! Es gab einen Fehler beim versenden der Nachricht.');
   }
 
+
+
+
+
+
+
+
+  /**
+   * Smooth scrolling
+   */
+  $('a[href*=#]:not([href=#])').click(function(e) {
+    e.preventDefault();
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var hash = this.hash;
+      var target = $(hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500, 'swing', function() {
+        });
+        window.history.pushState(null, null, hash);
+        updateActiveLink();
+
+        return false;
+      }
+
+    }
+  });
+
+
+  function updateActiveLink() {
+    hash = window.location.hash;
+    $('body > header nav a').removeClass('active');
+
+    var link = $('body > header nav a[href="' + hash + '"]');
+
+    if (hash != '#top' && link.length) {
+      link.addClass('active');
+    }
+
+  }
+  updateActiveLink();
+
+
 });
 
 
