@@ -188,6 +188,16 @@ section.why-only-you {
           top: -0.25em;
           left: -26px;
           background: url("../images/check.png") no-repeat top left;
+          background-size: 21px 25px;
+          @media
+            only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (   min--moz-device-pixel-ratio: 2),
+            only screen and (     -o-min-device-pixel-ratio: 2/1),
+            only screen and (        min-device-pixel-ratio: 2),
+            only screen and (                min-resolution: 192dpi),
+            only screen and (                min-resolution: 2dppx) { 
+            background-image: url("../images/check@2x.png");
+          }
         }
       }
     }
