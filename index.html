@@ -15,7 +15,6 @@
 <link rel="stylesheet" href="css/style.css?v=3">
 
 
-
 <link rel="shortcut icon" href="/favicons/favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
@@ -189,7 +188,18 @@
   <a class="anchor" name="kontakt"></a>
   <section class="write-message">
     <h1>Say Hello!</h1>
-    <p>Send us an email to: <br><a href="mailto:hello@onlyyouproductions.com">hello@onlyyouproductions.com</a></p>
+
+    <form class="contact-form" action="javascript:undefined">
+      <input placeholder="Name" class="name" type="text" name="name" value="" required>
+      <input placeholder="E-Mail" class="email" type="email" name="email" value="" required>
+      <textarea placeholder="Nachricht" class="message" required></textarea>
+      <button>Send</button>
+    </form>
+
+    <div class="contact-send-success" style="display: none;">
+      <p>Ihre Nachricht wurde erfolgreich versandt.</p>
+    </div>
+
   </section><section class="contact">
     <h1>Kontakt</h1>
     <p>
@@ -216,3 +226,10 @@
     </p>
   </section>
 </div></footer>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/contact.js"></script>
+
+
+

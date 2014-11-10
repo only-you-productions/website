@@ -26,7 +26,7 @@ html {
 }
 
 
-html {
+html, input, textarea, button {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
@@ -81,7 +81,9 @@ body > footer {
     margin-right: auto;
   }
 }
-
+body > footer > * {
+  max-width: $footer-width;
+}
 
 $menu-height: 4*$lh;
 $menu-mobile-height: 3*$lh;
@@ -346,10 +348,12 @@ body > footer {
 
   section {
     display: inline-block;
-    width: $site-width/3;
+    width: $footer-width/3;
     vertical-align: top;
     margin: $lh 0;
     text-align: left;
+    padding-left: $lh;
+    padding-right: $lh;
     h1 {
       font-size: 1.6rem;
       line-height: $lh;
@@ -359,4 +363,38 @@ body > footer {
 }
 
 
+.contact-form {
+  width: 90%;
+  input, textarea, button {
+    display: block;
+    padding: 0 $lh/2;
+    font-size: 0.8rem;
+    margin: 0.3rem 0;
+  }
+  input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;    
+  }
+  input, button {
+    height: 2.25rem;
+    vertical-align: middle;
+  }
+  textarea {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    height: 5rem;
+    line-height: $lh;
+  }
+
+  button {
+    width: auto;
+    background: #62A674;
+    border: none;
+    border-radius: 2px;
+    color: white;
+    text-transform: uppercase;
+    padding: 0 $lh;
+  }
+
+}
 
