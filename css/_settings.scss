@@ -1,7 +1,16 @@
 
+$lh: 1.5rem;
+
 $header-color: #135B79;
 $site-width: 744px;
 $footer-width: 960px;
+
+
+$menu-height: 4*$lh;
+$menu-mobile-height: 3*$lh;
+
+$logo-width: 134px;
+$logo-height: 56px;
 
 @mixin clearfix {
   &:after {

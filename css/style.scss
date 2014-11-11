@@ -12,8 +12,6 @@
 
 
 
-$lh: 1.5rem;
-
 
 /**
  * Generic definitions
@@ -85,15 +83,19 @@ body > footer > * {
   max-width: $footer-width;
 }
 
-$menu-height: 4*$lh;
-$menu-mobile-height: 3*$lh;
-
 /**
  * Specific main layout elements
  */
 body > header {
   padding-top: $menu-height;
   .mobile-logo { display: none; }
+
+  .mobile-logo, .logo {
+    img {
+      height: $logo-height;
+      width: $logo-width;
+    }
+  }
 
   > nav {
     $menu-height: 4*$lh;
@@ -141,8 +143,8 @@ body > header {
         }
 
         &.logo {
-          height: 56px;
-          width: 134px;
+          height: $logo-height;
+          width: $logo-width;
           position: absolute;
           top: 1.1em;
           left: 0;
