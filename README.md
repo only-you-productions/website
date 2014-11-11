@@ -5,6 +5,15 @@ The website is built with [jekyll](http://jekyllrb.com/) and hosted by
 
 Please refer to their documentation for more information.
 
+## Editing
+
+You can make all changes directly here on GitHub (view a file, click the edit
+button, and Save).
+
+If you are familiar with git, you can also simply fetch the repository and
+commit your changes as usual (refer to the gh-pages documentation).
+
+
 ## Domain hosting
 
 The domain is currently hosted by world4you.
