@@ -15,7 +15,7 @@ jQuery(function($) {
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
         data: {
-            'key': 'm61zGQpGJEpqY7m_ZDHiXQ',
+            'key': 'i6eBjF0rVDdK2tJlT-IS1A',
             'message': {
                 'from_email': email.val(),
                 'from_name': name.val(),
