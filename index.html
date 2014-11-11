@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 
 <meta charset="utf-8">
@@ -12,7 +14,7 @@
 
 
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v={{ site.time | date: "%s" }}">
 
 
 <link rel="shortcut icon" href="/favicons/favicon.ico">
@@ -55,7 +57,8 @@
 
 
 <section class="showreel dark"><div>
-  <iframe src="//player.vimeo.com/video/111352108" width="700" height="393" style="border: none;" allowfullscreen></iframe>
+  <h1>Innovative Konzepte</h1>
+  <iframe src="//player.vimeo.com/video/111352108" width="700" height="393" allowfullscreen></iframe>
 </div></section>
 
 <section class="work hero-unit light">
@@ -229,7 +232,7 @@
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script type="text/javascript" src="script/script.js"></script>
+<script type="text/javascript" src="script/script.js?v={{ site.time | date: "%s" }}"></script>
 
 
 

@@ -238,7 +238,11 @@ section.showreel {
   position: relative;
   padding: 4*$lh 0;
   text-align: center;
+  h1 {
+    display: none;
+  }
   iframe {
+    border: none;
     max-width: 100%;
     @media (max-width: 700px) {
       width: 500px;
