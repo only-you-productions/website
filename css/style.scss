@@ -97,6 +97,7 @@ body > header {
 
   > nav {
     $menu-height: 4*$lh;
+    white-space: nowrap;
     position: fixed;
     top: 0;
     left: 0;
